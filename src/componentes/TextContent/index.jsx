@@ -187,8 +187,6 @@ const TextContent = () => {
                     <div className="tecnologias">
                       <span className="tag">JavaScript</span>
                       <span className="tag">TypeScript</span>
-                      <span className="tag">HTML</span>
-                      <span className="tag">CSS</span>
                     </div>
                   </div>
                 </div>
