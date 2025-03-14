@@ -175,15 +175,14 @@ const TextContent = () => {
 
                   <div className="projeto_texto">
                     <h3>
-                      Fokus - Pomodoro Timer <ExternalLink size={18} />
+                      Fokus Pomodoro
+                      <ExternalLink size={18} />
                     </h3>
                     <p>
-                      Desenvolvi um timer Pomodoro com uma interface simples e
-                      fácil de usar, projetado para ajudar usuários a melhorar
-                      sua produtividade e gerenciamento de tempo. A aplicação
-                      possui algumas funcionalidades extras que permitem queo
-                      usuário manipule uma lista de tarefas ou escute música
-                      enquanto o timer está rodando.
+                      Criei um timer Pomodoro intuitivo para aumentar a
+                      produtividade, com funções de lista de tarefas e música
+                      integrada para aprimorar o foco e o gerenciamento de
+                      tempo.
                     </p>
                     <div className="tecnologias">
                       <span className="tag">JavaScript</span>
