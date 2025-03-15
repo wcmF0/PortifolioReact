@@ -1,6 +1,9 @@
-import { ExternalLink } from "lucide-react";
+import { Code, ExternalLink } from "lucide-react";
 import "./TextContent.css";
 import ProjetoAram from "./assets/ProjetoAram.png";
+import CodeConnect from "./assets/CodeConnect.png";
+import Fokus from "./assets/Fokus.png";
+import SpotifyClone from "./assets/SpotifyClone.png";
 
 const TextContent = () => {
   return (
@@ -135,7 +138,7 @@ const TextContent = () => {
                 <div>
                   <img
                     className="projetoAram"
-                    src={ProjetoAram}
+                    src={CodeConnect}
                     alt="Imagem do ProjetoAram"
                   ></img>
 
@@ -169,7 +172,7 @@ const TextContent = () => {
                 <div>
                   <img
                     className="projetoAram"
-                    src={ProjetoAram}
+                    src={Fokus}
                     alt="Imagem do ProjetoAram"
                   ></img>
 
@@ -201,7 +204,7 @@ const TextContent = () => {
                 <div>
                   <img
                     className="projetoAram"
-                    src={ProjetoAram}
+                    src={SpotifyClone}
                     alt="Imagem do ProjetoAram"
                   ></img>
 
