@@ -14,7 +14,7 @@ const TextContent = () => {
           <strong className="negrito">
             Análise e Desenvolvimento de Sistemas
           </strong>{" "}
-          na Estácio e, nos últimos 5 meses, tenho me dedicado ao aprendizado e
+          na Estácio e, nos últimos meses, tenho me dedicado ao aprendizado e
           aprimoramento em tecnologias como{" "}
           <strong className="negrito">
             <a
