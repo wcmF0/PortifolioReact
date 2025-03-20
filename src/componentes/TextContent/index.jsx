@@ -4,6 +4,7 @@ import ProjetoAram from "./assets/ProjetoAram.png";
 import CodeConnect from "./assets/CodeConnect.png";
 import Fokus from "./assets/Fokus.png";
 import SpotifyClone from "./assets/SpotifyClone.png";
+import CardBank from "./assets/CardBank.png";
 
 const TextContent = () => {
   return (
@@ -121,6 +122,42 @@ const TextContent = () => {
                       dos campeões com base no patch atual do jogo.
                     </p>
                     <div className="tecnologias">
+                      <span className="tag">JavaScript</span>
+                      <span className="tag">HTML</span>
+                      <span className="tag">CSS</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://card-bank-react.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div>
+                  <img
+                    className="projetoAram"
+                    src={CardBank}
+                    alt="Imagem do ProjetoAram"
+                  ></img>
+
+                  <div className="projeto_texto">
+                    <h3>
+                      Web Page - CardBank <ExternalLink size={18} />
+                    </h3>
+                    <p>
+                      Projeto focado em criar uma página web moderna e funcional
+                      que comunica claramente os benefícios do banco aos seus
+                      clientes. O projeto inclui elementos dinâmicos e
+                      interativos, garantindo uma navegação intuitiva, além de
+                      um design responsivo que se adapta a diversos
+                      dispositivos. Meu foco foi oferecer uma experiência
+                      visualmente atraente e centrada no usuário.
+                    </p>
+                    <div className="tecnologias">
+                      <span className="tag">React</span>
                       <span className="tag">JavaScript</span>
                       <span className="tag">HTML</span>
                       <span className="tag">CSS</span>
