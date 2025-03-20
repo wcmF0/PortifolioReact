@@ -5,11 +5,36 @@ import CodeConnect from "./assets/CodeConnect.png";
 import Fokus from "./assets/Fokus.png";
 import SpotifyClone from "./assets/SpotifyClone.png";
 import CardBank from "./assets/CardBank.png";
+import { useEffect, useRef } from "react";
 
 const TextContent = () => {
+  const elementsRef = useRef([]);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          } else {
+            entry.target.classList.remove("show");
+          }
+        });
+      },
+      { threshold: 0.2 } // Ajuste conforme necessário
+    );
+
+    elementsRef.current.forEach((el) => {
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
   return (
     <div className="container_direito">
-      <section className="container_texto">
+      <section
+        className="container_texto hidden"
+        ref={(el) => elementsRef.current.push(el)}
+      >
         <p>
           Olá, meu nome é Wagner Filho. Atualmente curso{" "}
           <strong className="negrito">
@@ -87,9 +112,12 @@ const TextContent = () => {
       </section>
 
       <section id="projetos" className="container_projetos">
-        <div className="container__projetos">
+        <div
+          className="container__projetos hidden"
+          ref={(el) => elementsRef.current.push(el)}
+        >
           <ul className="container_lista_projeto">
-            <li>
+            <li className="hidden" ref={(el) => elementsRef.current.push(el)}>
               <a
                 href="https://aram-randomizer-roan.vercel.app/"
                 target="_blank"
@@ -130,7 +158,7 @@ const TextContent = () => {
                 </div>
               </a>
             </li>
-            <li>
+            <li className="hidden" ref={(el) => elementsRef.current.push(el)}>
               <a
                 href="https://card-bank-react.vercel.app"
                 target="_blank"
@@ -166,7 +194,7 @@ const TextContent = () => {
                 </div>
               </a>
             </li>
-            <li>
+            <li className="hidden" ref={(el) => elementsRef.current.push(el)}>
               <a
                 href="https://codeconnect-react-app.vercel.app"
                 target="_blank"
@@ -200,7 +228,7 @@ const TextContent = () => {
                 </div>
               </a>
             </li>
-            <li>
+            <li className="hidden" ref={(el) => elementsRef.current.push(el)}>
               <a
                 href="https://fokus-ts-one.vercel.app"
                 target="_blank"
@@ -232,7 +260,7 @@ const TextContent = () => {
                 </div>
               </a>
             </li>
-            <li>
+            <li className="hidden" ref={(el) => elementsRef.current.push(el)}>
               <a
                 href="https://spotify-react-jet.vercel.app"
                 target="_blank"

@@ -2,11 +2,12 @@ import "./About.css";
 import { Github, Instagram } from "lucide-react";
 import { Linkedin } from "lucide-react";
 import { Mail } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { FileUser } from "lucide-react";
 
 const About = () => {
   const [showCopied, setShowCopied] = useState(false);
+  const aboutRef = useRef(null);
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText("wcmf2002@gmail.com");
@@ -16,8 +17,32 @@ const About = () => {
       setShowCopied(false);
     }, 2000);
   };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          aboutRef.current.classList.add("show");
+        } else {
+          aboutRef.current.classList.remove("show");
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (aboutRef.current) {
+      observer.observe(aboutRef.current);
+    }
+
+    return () => {
+      if (aboutRef.current) {
+        observer.unobserve(aboutRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="container_esquerdo">
+    <div className="container_esquerdo hidden" ref={aboutRef}>
       <header className="header">
         <h1 className="h1">Wagner Filho</h1>
         <h2 className="h2">Desenvolvedor Front End</h2>
